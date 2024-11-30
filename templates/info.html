@@ -1,0 +1,27 @@
+{% include 'head.html' %}
+
+<div class="container my-5">
+    <h1>{{head_}}</h1>
+    {% for i in datas:%}
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        
+    
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <p class="lead">DATE: {{i['date'].split('T')[0]}}</p>
+        <p class="lead">Open: {{i['open']}}</p>
+        <p class="lead">High: {{i['high']}}</p>
+        <p class="lead">Low: {{i['low']}}</p>
+        <p class="lead">Volume: {{i['volume']}}</p>
+        <p class="lead">Adj_High: {{i['adj_high']}}</p>
+        <p class="lead">Adj_Low: {{i['adj_low']}}</p>
+        <p class="lead">Adj_close: {{i['adj_close']}}</p>
+        <p class="lead">Adj_open: {{i['adj_open']}}</p>
+        <p class="lead">Adj_volume: {{i['adj_volume']}}</p>
+        
+      </div>
+
+    </div>
+    {% endfor %}
+    <button type="button" class="btn btn-outline-secondary btn-lg px-4"><a href="{{url_for('intrest_stock')}}" class="nav-link">GO BACK</a></button>
+    <button type="button" class="btn btn-outline-secondary btn-lg px-4"><a href="{{url_for('home')}}" class="nav-link">HOME</a></button>
+  </div>

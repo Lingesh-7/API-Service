@@ -1,0 +1,31 @@
+{% include 'head.html' %}
+
+<div class="container my-5">
+    <h1>{{head_}}</h1>
+    {% if datas ==[]: %}
+    <h3>NO RESULT FOUND!</h3>
+    {% else: %}
+    {% for i in datas:%}
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <p class="lead">ID: {{i['id']}}</p>
+        
+        <p class="lead">Name: {{i['name']}}</p>
+        <p class="lead">Brewery Type: {{i['brewery_type']}}</p>
+        <p class="lead">City: {{i['city']}}</p>
+        <p class="lead">State: {{i['state']}}</p>
+        <p class="lead">Country: {{i['country']}}</p>
+        <p class="lead">State province: {{i['state_province']}}</p>
+        
+        <p class="lead">Postal Code: {{i['postal_code']}}</p>
+        <p class="lead">Website Url: <a href="{{i['website_url']}}">{{i['website_url']}}</a></p>
+        <p class="lead">Phone: {{i['phone']}}</p>
+        
+      </div>
+
+    </div>
+    {% endfor %}
+    <button type="button" class="btn btn-outline-secondary btn-lg px-4"><a href="{{url_for('brewerry_')}}" class="nav-link">GO BACK</a></button>
+    <button type="button" class="btn btn-outline-secondary btn-lg px-4"><a href="{{url_for('home')}}" class="nav-link">HOME</a></button>
+  {% endif %}
+  </div>

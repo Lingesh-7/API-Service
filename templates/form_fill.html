@@ -1,0 +1,20 @@
+{% include 'head.html' %}
+{% from "bootstrap5/form.html" import render_form %}
+<body>
+    <div class="container my-5">
+      {% if needed: %}
+        <h3>Fill the requried field you need!</h3>
+      {% endif %}
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+            
+        
+          <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+            {{render_form(forms,novalidate=True, button_map={"submit": "primary"}) }}
+          </div>
+    
+        </div>
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4"><a href="{{url_for('home')}}" class="nav-link">HOME</a></button>
+      </div>
+    
+</body>
+</html>
