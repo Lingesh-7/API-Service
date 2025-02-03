@@ -4,9 +4,7 @@ from flask_bootstrap import Bootstrap5
 from form import Stock,Brewerry,CustomSearch
 
 
-# stock 8445a652db9735d5c1cd67230f51d30d
-
-#Lord of Rings   q9GX1aDDj_Xp4TWdLMhP
+# 
 
 
 app=Flask(__name__)
